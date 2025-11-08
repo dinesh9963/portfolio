@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinesh Y | Portfolio</title>
+
+  <style>
+    /* Global */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+      color: #0a2540;
+    }
+
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      padding: 12px 25px;
+      border-bottom: 1px solid #e3e8ef;
+      z-index: 20;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #0b6cff;
+      font-weight: 600;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 0;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.6rem;
+      margin: 0;
+      font-weight: 800;
+    }
+
+    .hero-text p {
+      max-width: 450px;
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 600;
+      margin-right: 10px;
+      border: 2px solid #0b6cff;
+      color: #0b6cff;
+    }
+
+    .btn.primary {
+      background: #0b6cff;
+      color: white;
+    }
+
+    /* Avatar */
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #dbeaff, #bcd6ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #0b3b7a;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      border-left: 6px solid #0b6cff;
+      padding-left: 12px;
+    }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.70);
+      backdrop-filter: blur(12px);
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid #e3e6ef;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    footer {
+      background: #0b6cff;
+      padding: 18px;
+      color: white;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero-text h1 { font-size: 2rem; }
+      nav { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <h2>Dinesh Y</h2>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-text">
+      <h1>Hello, I'm <span style="color:#0b6cff">Dinesh</span></h1>
+      <p>Power Apps & Power Automate Developer who also builds modern web interfaces using HTML, CSS & JavaScript.</p>
+
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="mailto:yadlapallidinesh9966@gmail.com">Hire Me</a>
+    </div>
+
+    <div class="avatar">DY</div>
+  </section>
+
+  <!-- PROJECTS -->
+ <!-- PROJECTS -->
+<section id="projects" class="container">
+  <div class="section-title">Projects</div>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Venture Sales App</h3>
+      <p>PowerApps app for managing client details, documents, and approvals.</p>
+    </div>
+
+    <div class="card">
+      <h3>JavaScript CRUD App</a></h3>
+      <p>Mini CRUD application using HTML forms and JavaScript DOM.</p>
+       <a href="projects/Crud operations/Crud.html" class="btn primary">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>To-Do List App</h3>
+      <p>Simple and clean task manager with add/remove and complete features.</p>
+       <a href="/Projects/Todo App/Todo.html" class="btn primary">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- SKILLS -->
+  <section id="skills" class="container">
+    <div class="section-title">Skills</div>
+
+    <div class="grid">
+      <div class="card"><h3>Web</h3><p>HTML, CSS, JavaScript, UI/UX</p></div>
+      <div class="card"><h3>Power Platform</h3><p>Power Apps, Flows, SharePoint</p></div>
+      <div class="card"><h3>Soft Skills</h3><p>Communication, Problem Solving, Adaptability</p></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="container">
+    <div class="section-title">Experience</div>
+
+    <div class="card">
+      <h3>Power Apps Intern — Trait Software</h3>
+      <p>Jul 2025 – Sep 2025</p>
+      <p>Developed Canvas Apps, automated workflows & integrated SharePoint data.</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="container">
+    <div class="section-title">Education</div>
+
+    <div class="card">
+      <h3>B.Tech Mechanical Engineering</h3>
+      <p>Siddhartha Institute, 2020–2024 (CGPA 7.3)</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <div class="section-title">Contact</div>
+
+    <div class="card">
+      <p>Email: <b>yadlapallidinesh9966@gmail.com</b></p>
+      <a class="btn primary" href="mailto:yadlapallidinesh9966@gmail.com">Send Email</a><br><br>
+      <a class="btn" href="https://github.com/dineshyadlapalli" target="_blank">GitHub</a>
+      <a class="btn" href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Dinesh Y — All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

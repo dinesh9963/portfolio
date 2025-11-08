@@ -1,0 +1,53 @@
+   body{
+        font-family:Arial, sans-serif;
+        background:#f1f6ff;
+        padding:20px;
+    }
+    .container{
+        max-width:500px;
+        margin:auto;
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+    input, button{
+        padding:10px;
+        border-radius:6px;
+        border:1px solid #ddd;
+        margin-bottom:10px;
+        width:100%;
+    }
+    button{
+        background:#0b6cff;
+        color:white;
+        border:none;
+        cursor:pointer;
+    }
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:15px;
+    }
+    th, td{
+        border:1px solid #ddd;
+        padding:8px;
+        text-align:left;
+    }
+    th{
+        background:#0b6cff;
+        color:white;
+    }
+    .actions button{
+        width:auto;
+        padding:6px 10px;
+        margin-right:5px;
+        border:none;
+        background:#444;
+        color:white;
+        cursor:pointer;
+        border-radius:4px;
+    }
+    .delete{
+        background:#e63946;
+    }

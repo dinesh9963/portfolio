@@ -1,0 +1,128 @@
+:root{
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  --bg: #f6fbff;
+  --card: #ffffff;
+  --accent: #0b6cff;
+}
+
+body{
+  margin:0;
+  background: linear-gradient(180deg,#eaf5ff,#f6fbff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
+.wrap{
+  width:420px;
+  max-width:94vw;
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.08);
+}
+
+h1{
+  margin:0 0 12px;
+  font-size:1.2rem;
+  color:#07203a;
+}
+
+form{ display:flex; gap:8px; }
+
+input[type="text"]{
+  flex:1;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e6eef6;
+}
+
+button{
+  padding:10px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+}
+
+#searchBox{
+  width:90%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:1px solid #d5e4f1;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+  margin:12px 0 0;
+  max-height:60vh;
+  overflow:auto;
+}
+
+/* Single task row */
+li{
+  display:flex;
+  align-items:center;
+  justify-content:space-between; /* key: pushes actions to right */
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #f0f6fb;
+  margin-bottom:8px;
+  background:#fbfdff;
+}
+
+/* Left part: checkbox + label */
+li .left{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex:1;
+}
+
+li.completed label{
+  opacity:.5;
+  text-decoration:line-through;
+}
+
+/* Actions (Edit/Delete) aligned right */
+.actions{
+  display:flex;
+  gap:8px;
+}
+
+.actions button{
+  background:transparent;
+  border:none;
+  color:#6b7c8c;
+  cursor:pointer;
+  padding:4px 6px;
+}
+
+.filters{
+  display:flex;
+  gap:8px;
+  color: #0b6cff;
+  margin-top:10px;
+  align-items:center;
+}
+
+.filters button.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.count{
+  margin-left:auto;
+  color:#6b7c8c;
+  font-size:.95rem;
+}
+
+@media (max-width:480px){
+  .wrap{ padding:12px; }
+  li{ padding:8px; }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRUD App — Dinesh</title>
+<link rel="stylesheet" href="/Projects/Crud operations/Crud.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h2>CRUD App (LocalStorage)</h2>
+
+    <!-- Input Field -->
+    <input type="text" id="inputField" placeholder="Enter item...">
+    <button onclick="addItem()">Add</button>
+
+    <!-- Display Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Item</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+        
+    </table>
+     <div style="margin: 20px;">
+    <a href="/Html.html" class="btn" style="padding:10px 16px; background:#0b6cff; color:white; border-radius:6px; text-decoration:none;">
+      Back to Portfolio
+    </a>
+  </div>
+
+</div>
+
+<script>
+let items = JSON.parse(localStorage.getItem("crud-items") || "[]");
+
+// Save function
+function save(){
+    localStorage.setItem("crud-items", JSON.stringify(items));
+}
+
+// Show data
+function render(){
+    const table = document.getElementById("tableBody");
+    table.innerHTML = "";
+
+    items.forEach((item, index) => {
+        table.innerHTML += `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${item.text}</td>
+                <td class="actions">
+                    <button onclick="editItem(${index})">Edit</button>
+                    <button class="delete" onclick="deleteItem(${index})">Delete</button>
+                </td>
+            </tr>
+        `;
+    });
+}
+
+// Create
+function addItem(){
+    const input = document.getElementById("inputField");
+    const text = input.value.trim();
+    if(!text) return alert("Please enter something");
+    items.push({ text });
+    save();
+    render();
+    input.value = "";
+}
+
+// Update
+function editItem(index){
+    const newText = prompt("Edit item:", items[index].text);
+    if(newText !== null && newText.trim()){
+        items[index].text = newText.trim();
+        save();
+        render();
+    }
+}
+
+// Delete
+function deleteItem(index){
+    if(confirm("Delete this item?")){
+        items.splice(index, 1);
+        save();
+        render();
+    }
+}
+
+// First load
+render();
+</script>
+
+</body>
+</html>
